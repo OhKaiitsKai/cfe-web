@@ -15,7 +15,9 @@ return (
 <input required type="email" placeholder="Correo electrónico" />
 <input required type="emailconf" placeholder="Confirmar correo electrónico" />
 <input required type="password" placeholder="Contraseña" />
+<input required type="passwordconf" placeholder="Confirmar contraseña" />
 <button>Regístrate</button>
+<p>¿Ya tienes una cuenta? Inicia sesión </p>
 </form>
 </div>
 </div>

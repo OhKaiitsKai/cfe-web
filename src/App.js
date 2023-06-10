@@ -1,9 +1,10 @@
-import LogIn from "./pages/LogIn";
+
 import "./App.scss"
+import LandingPage from "./pages/Landing";
 
 function App() {
   return (
-    < LogIn />
+    < LandingPage />
   );
 }
 

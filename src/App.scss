@@ -15,13 +15,16 @@
       @content
   }
 }
+
+//LOGIN-SIGNUP
 .formContainer {
-    background-color: #006414;
+    background-color: #069022;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-  
+    font-family: Arial, Helvetica, sans-serif;
+
     .formWrapper{
       background-color: white;
       padding: 20px 60px;
@@ -38,7 +41,7 @@
       }
       .titleforAcc{
         color:#009929;
-        font-size: 22px;
+        font-size: 24px;
       }
   
       form{
@@ -72,3 +75,132 @@
       }
     }
   }
+
+//LANDINGPAGE
+.principalHeader {
+font-family: Arial, Helvetica, sans-serif;
+background-color: white;
+align-items: center;
+justify-content: flex;
+  .headerContainer {
+    border-bottom: 1px solid #009929;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    width:100%;
+    height: 0%;
+    display:flex;
+    overflow: hidden;
+
+    .logoh {
+      height: auto;
+      width: auto;
+      transform: scale(0.6);
+      margin-left: 0.1px;
+    }
+
+    .LogInbtn {
+      background-color: white;
+      color: #5ccb5f;
+      border: none;
+      font-size: 20px;
+      display: flex;
+      align-items: baseline;
+      cursor: pointer;
+      margin-left: 840px;
+      margin-top: 60px;
+      margin-right: 10px; 
+    }
+
+    .SignUpbtn {
+      background-color: #5ccb5f;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      display: flex;
+      align-items: baseline;
+      cursor: pointer;
+      margin-right: auto;
+      margin-top: 60px;
+      margin-bottom: auto;
+    }
+  }
+}
+
+.navbar {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #5ccb5f;
+  padding: 6px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  .nav-menu ul {
+    list-style-type: none;
+    color: white;
+    margin-left: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Ajusta los elementos a la derecha */
+    gap: 20px; /* Espacio entre elementos de navegación */
+  }
+  
+  .nav-item {
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .search-form form {
+    display: flex;
+    align-items:center;
+  }
+  
+  .search-form input {
+    width: 250px; 
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .search-form button {
+    padding: 5px 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  width: 900px;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.controls {
+  display: flex;
+}
+
+.controls button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
