@@ -76,26 +76,31 @@
     }
   }
 
-//LANDINGPAGE
+
+// LANDINGPAGE
 .principalHeader {
-font-family: Arial, Helvetica, sans-serif;
-background-color: white;
-align-items: center;
-justify-content: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  align-items: center;
+  justify-content: flex;
+
   .headerContainer {
     border-bottom: 1px solid #009929;
     border-radius: 10px;
     padding-bottom: 10px;
-    width:100%;
+    width: 100%;
     height: 0%;
-    display:flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 
     .logoh {
       height: auto;
       width: auto;
       transform: scale(0.6);
-      margin-left: 0.1px;
+      margin-left: auto;
+    margin-right: auto;
     }
 
     .LogInbtn {
@@ -108,7 +113,15 @@ justify-content: flex;
       cursor: pointer;
       margin-left: 840px;
       margin-top: 60px;
-      margin-right: 10px; 
+      margin-right: 10px;
+
+      @include tablet {
+        margin-left: 440px;
+      }
+
+      @include mobile {
+        margin-left: 240px;
+      }
     }
 
     .SignUpbtn {
@@ -122,8 +135,45 @@ justify-content: flex;
       align-items: baseline;
       cursor: pointer;
       margin-right: auto;
+      margin-left: auto;
       margin-top: 60px;
       margin-bottom: auto;
+
+      @include tablet {
+        margin-top: 20px;
+      }
+
+      @include mobile {
+        margin-top: 10px;
+      }
+    }
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      .logoh {
+        margin: 10px auto;
+      }
+  
+      .LogInbtn,
+      .SignUpbtn {
+        margin: 10px;
+      }
+    }
+  
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      .logoh {
+        margin: 10px auto;
+      }
+  
+      .LogInbtn,
+      .SignUpbtn {
+        margin: 10px;
+      }
     }
   }
 }
@@ -132,38 +182,55 @@ justify-content: flex;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #5ccb5f;
   padding: 6px;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
+
   .nav-menu ul {
     list-style-type: none;
     color: white;
     margin-left: 60px;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Ajusta los elementos a la derecha */
-    gap: 20px; /* Espacio entre elementos de navegación */
+    justify-content: flex-end;
+    gap: 20px;
   }
-  
+
   .nav-item {
     cursor: pointer;
     font-size: 20px;
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
-  
+
   .search-form form {
     display: flex;
-    align-items:center;
+    align-items: center;
   }
-  
+
   .search-form input {
-    width: 250px; 
+    width: 250px;
     margin-right: 10px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 6px;
+
+    @include tablet {
+      width: 180px;
+    }
+
+    @include mobile {
+      width: 150px;
+    }
   }
-  
+
   .search-form button {
     padding: 5px 10px;
     background-color: #ccc;
@@ -173,34 +240,209 @@ justify-content: flex;
   }
 }
 
-.carousel {
+.features {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+
+  .feature {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666;
+    }
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
+
+    .feature {
+      width: 200px;
+      margin: 10px;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+
+    .feature {
+      width: 250px;
+      margin: 10px;
+    }
+  }
+}
+
+.testimonials {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .testimonial {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+
+    &.testimonial-1 {
+      border-color: #5ccb5f;
+    }
+
+    &.testimonial-2 {
+      border-color: #0099ff;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .testimonial-author {
+      font-size: 14px;
+      color: #666;
+      font-style: italic;
+    }
+  }
+}
+
+
+.footer {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #5ccb5f;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.principalHeaders {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
   align-items: center;
-}
+  justify-content: flex;
 
-.image-container {
-  width: 900px;
-  height: 300px;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
+  .headersContainer {
+    border-bottom: 1px solid #009929;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .logohs {
+      height: auto;
+      width: auto;
+      transform: scale(0.6);
+      margin-left:auto;
+      margin-right: 916px;
+    }
 
-.controls {
-  display: flex;
-}
+    span {
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 15px;
+      font-size: 20px;
+      color: #5ccb5f;
+    }
 
-.controls button {
-  margin: 0 5px;
-  padding: 5px 10px;
-  background-color: #ccc;
-  border: none;
-  cursor: pointer;
+    .SignUpbtn {
+      background-color: #5ccb5f;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 20px;
+      display: flex;
+      align-items: baseline;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 60px;
+      margin-bottom: auto;
+
+      @include tablet {
+        margin-top: 20px;
+      }
+
+      @include mobile {
+        margin-top: 10px;
+      }
+    }
+
+    button {
+      background-color: white;
+      color: #5ccb5f;
+      border: none;
+      font-size: 20px;
+      display: flex;
+      align-items: baseline;
+      cursor: pointer;
+      margin-left: auto;
+      margin-top: 60px;
+      margin-right: 10px;
+
+      @include tablet {
+        margin-left: 440px;
+      }
+
+      @include mobile {
+        margin-left: 240px;
+      }
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .logohs {
+        margin: 10px auto;
+      }
+
+      span,
+      button {
+        margin: 10px;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .logohs {
+        margin: 10px auto;
+      }
+
+      span,
+      button {
+        margin: 10px;
+      }
+    }
+  }
 }
 
